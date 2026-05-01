@@ -10,7 +10,7 @@ const GestureTimer = () => {
   
   const webcamRef = useRef<Webcam>(null);
   const recognizerRef = useRef<GestureRecognizer | null>(null);
-  const requestRef = useRef<number>();
+  const requestRef = useRef<number | null>(null);
 
   useEffect(() => {
     const initGestureRecognizer = async () => {
