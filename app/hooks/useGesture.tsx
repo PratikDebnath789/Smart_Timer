@@ -24,7 +24,7 @@ export const useGesture = (videoRef: React.RefObject<HTMLVideoElement>) => {
 
   const detect = async () => {
     if (recognizerRef.current && videoRef.current && videoRef.current.readyState === 4) {
-      const result = recognizerRef.current.recognizeVideo(videoRef.current, Date.now());
+      const result = recognizerRef.current.recognizeForVideo(videoRef.current, Date.now());
       if (result.gestures.length > 0) {
         setGesture(result.gestures[0][0].categoryName);
       }
